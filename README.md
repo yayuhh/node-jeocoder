@@ -31,7 +31,7 @@ GET /zips/15213
 
 ## Support
 + `CORS` [Access-Control-Allow-Origin: *](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
-+ `JSONP` [http://jeocoder.herokuapp.com/zips/15213?callback=foo](/zips/15213?callback=foo)
++ `JSONP` [/zips/15213?callback=foo](http://jeocoder.herokuapp.com/zips/15213?callback=foo)
 
 ## Live Demo
 [http://jeocoder.herokuapp.com/zips/15213](http://jeocoder.herokuapp.com/zips/15213)
