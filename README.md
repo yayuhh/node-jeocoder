@@ -3,7 +3,7 @@ jeocoder
 
 jeocoder is a geocoder, mapping a 5 digit zip code to a (city,state) tuple. it is self-contained and does not depend on any external services. the [geocoder](https://npmjs.org/package/geocoder) module name was already taken :|
 
-Why not use Google? It is against their [TOS](https://developers.google.com/maps/terms#section_10_12).
+Why not just use Google? It's against their [TOS](https://developers.google.com/maps/terms#section_10_12) :-1:.
 ## Setup
 ```bash
 git clone git@github.com:jmonster/node-jeocoder.git
