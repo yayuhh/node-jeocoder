@@ -18,5 +18,16 @@ Parameters
 
 + `:zipcode` a valid 5 digit US zip code
 
+## Example
+```
+GET /zips/:zipcode
+```
+```json
+{
+  "state": "PA",
+  "city": "PITTSBURGH"
+}
+```
+
 ## Live Demo
 [http://jeocoder.herokuapp.com/zips/15213](http://jeocoder.herokuapp.com/zips/15213)
