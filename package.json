@@ -1,7 +1,10 @@
 {
   "name": "jeocoder",
-  "version": "0.0.1",
-  "private": false,
+  "version": "0.0.2",
+  "author": "Johnny Domino <jvdomino@gmail.com>",
+  "repository" : "git://github.com/jmonster/node-jeocoder",
+  "main": "lib/jeocoder",
+  "keywords": ["geocode","geocoder","zipcode"],
   "scripts": {
     "start": "node app"
   },

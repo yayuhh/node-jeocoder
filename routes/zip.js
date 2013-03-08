@@ -1,21 +1,18 @@
-var zips = require('../lib/zips/zips.json')
+var jeocode = require('../lib/jeocoder')
 
 /*
  * GET details.
  */
 
-exports.details = function(req, res){
+exports.details = function(req, res, next){
   var zipCode = req.param('zip')
+    , details = jeocode(zipCode, function(err, details) {
+      if (err) { return next(err) }
 
-  // validate input
-  if (!zipCode) { return res.send(400,'undefined zipcode') }
-  if (zipCode.length !== 5) { return res.send(400, 'invalid zipcode') }
+      // verify existance
+      if (!details) { return res.send(404) }
 
-  var details = zips[zipCode]
-
-  // verify existance
-  if (!details) { return res.send(404) }
-
-  // success
-  res.jsonp(details)
-};
+      // return details
+      res.jsonp(details)
+    })
+}
