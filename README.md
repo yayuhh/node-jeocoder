@@ -20,7 +20,7 @@ Parameters
 
 ## Example
 ```
-GET /zips/:zipcode
+GET /zips/15213
 ```
 ```json
 {
