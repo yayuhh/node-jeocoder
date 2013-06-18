@@ -1,7 +1,7 @@
 jeocoder
 ========
 
-jeocoder is a geocoder, mapping a 5 digit zip code to a (city,state) tuple. it is self-contained and does not depend on any external services. the [geocoder](https://npmjs.org/package/geocoder) module name was already taken :|
+jeocoder is a geocoder, mapping a 5-digit US zip code or 6-character Canadian postal code to a (city,state/province) tuple. it is self-contained and does not depend on any external services. the [geocoder](https://npmjs.org/package/geocoder) module name was already taken :|
 
 Why not just use Google? It's against their [TOS](https://developers.google.com/maps/terms#section_10_12). :-1:
 ## Setup
@@ -12,20 +12,32 @@ node app
 ```
 
 ## Usage
-`GET /zips/:zipcode`
+`GET /postal_codes/:code`
 
 Parameters
 
-+ `:zipcode` a valid 5 digit US zip code
++ `:code` a valid 5-digit US zip code or 6-character Canadian postal code
 
-## Example
+## Examples
 ```
-GET /zips/15213
+GET /postal_codes/15213
 ```
 ```json
 {
   "state": "PA",
-  "city": "PITTSBURGH"
+  "city": "PITTSBURGH",
+  "country": "US"
+}
+```
+
+```
+GET /postal_codes/H2Y1C6
+```
+```json
+{
+  "province": "QC",
+  "city": "MONTRÉAL",
+  "country": "CA"
 }
 ```
 
