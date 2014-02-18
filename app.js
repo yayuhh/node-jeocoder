@@ -3,11 +3,11 @@
  * Module dependencies.
  */
 
-var express    = require('express')
-  , clustrap   = require('clustrap')
-  , zip        = require('./routes/zip')
-  , middleware = require('./lib/middleware')
-  , pkg        = require('./package.json');
+var express     = require('express')
+  , clustrap    = require('clustrap')
+  , postal_code = require('./routes/postal_code')
+  , middleware  = require('./lib/middleware')
+  , pkg         = require('./package.json');
 
 var app = express();
 
@@ -23,6 +23,7 @@ app.configure(function(){
   app.use(app.router);
 });
 
-app.get('/zips/:zip', middleware.makeCacheable, middleware.allowCrossDomain, zip.details);
+app.get('/zips/:code', middleware.makeCacheable, middleware.allowCrossDomain, postal_code.details);
+app.get('/postal_codes/:code', middleware.makeCacheable, middleware.allowCrossDomain, postal_code.details);
 
 clustrap(app);

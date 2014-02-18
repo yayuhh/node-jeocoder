@@ -5,8 +5,8 @@ var jeocode = require('../lib/jeocoder')
  */
 
 exports.details = function(req, res, next){
-  var zipCode = req.param('zip')
-    , details = jeocode(zipCode, function(err, details) {
+  var postal_code = req.param('code')
+    , details = jeocode(postal_code, function(err, details) {
       if (err) { return next(err) }
 
       // verify existance
