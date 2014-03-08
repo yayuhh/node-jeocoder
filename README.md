@@ -16,7 +16,7 @@ node app
 
 Parameters
 
-+ `:code` a valid 5-digit US zip code or 6-character Canadian postal code
++ `code` a valid 5-digit US zip code or 6-character Canadian postal code
 
 ## Examples
 ```
